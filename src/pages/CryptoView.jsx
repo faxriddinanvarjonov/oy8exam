@@ -183,10 +183,12 @@ function CryptoView(props) {
         <div className="flex flex-col gap-[20px] items-center w-full max-w-[547px] px-[25px] border-r-2 border-[#808080] min-h-[783px] mr-[40px]">
           <img
             className="max-w-[200px] flex"
-            src={data.image.large}
+            src={data.image.large && data.image.large}
             alt="img"
           />
-          <h3 className="Montserrat text-[48px] text-white">{data.name}</h3>
+          <h3 className="Montserrat text-[48px] text-white">
+            {data.name && data.name}
+          </h3>
           <p className="text-white Montserrat ">
             {data.description.en.slice(0, data.description.en.indexOf("."))}.
           </p>
